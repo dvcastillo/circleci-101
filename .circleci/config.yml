@@ -12,7 +12,7 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A more familar hi"
+      - run: echo "A more familiar hi"
       - run: sleep 5
 workflows:
   version: 2
@@ -20,6 +20,6 @@ workflows:
     jobs:
       - build
       - test:
-        # only run this job if build succeeds
-        requires:
-          - build
+          # only run this job if build succeeds
+          requires:
+            - build
